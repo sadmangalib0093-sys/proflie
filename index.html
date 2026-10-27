@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="SADMAN GALIB — Professional Gamer. Links, games and socials.">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SADMAN GALIB home"><span class="brand-mark">SG</span><span>LINK<span class="accent">HUB</span></span></a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch theme" title="Switch theme"><span id="themeIcon">☼</span></button>
+  </header>
+
+  <main class="page-shell">
+    <section class="profile-card glass">
+      <div class="status"><span class="status-dot"></span> AVAILABLE ONLINE</div>
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <img class="avatar" src="https://api.dicebear.com/9.x/adventurer/svg?seed=SadmanGalib&backgroundColor=b6e3f4,c0aede,d1d4f9" alt="Cartoon gamer avatar">
+        <span class="level-badge">LVL 99</span>
+      </div>
+      <p class="eyebrow">WELCOME TO MY SPACE</p>
+      <h1>SADMAN <span>GALIB</span></h1>
+      <p class="role">Professional Gamer</p>
+      <div class="subtitle-badge"><span>✦</span> Editor <i>•</i> Gamer <i>•</i> Student</div>
+      <p class="bio">Gaming, creativity & good vibes.<br>Connect with me across the internet.</p>
+
+      <div class="social-links">
+        <a class="social-link facebook" href="https://www.facebook.com/sadmangalib0093" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">f</span><span class="social-copy"><strong>Facebook</strong><small>Follow my updates</small></span><span class="link-arrow">↗</span>
+        </a>
+        <a class="social-link instagram" href="https://www.instagram.com/saad_galib_/?hl=en" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon insta-icon">◎</span><span class="social-copy"><strong>Instagram</strong><small>Photos & stories</small></span><span class="link-arrow">↗</span>
+        </a>
+        <a class="social-link discord" href="https://discord.gg/GxkVRqMQQ8" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">◈</span><span class="social-copy"><strong>Discord Server</strong><small>Join the community</small></span><span class="link-arrow">↗</span>
+        </a>
+        <button class="social-link gmail" id="emailOpen">
+          <span class="social-icon">✉</span><span class="social-copy"><strong>Email Me</strong><small>Let's get in touch</small></span><span class="link-arrow">＋</span>
+        </button>
+      </div>
+
+      <button class="hobby-button" id="hobbyOpen"><span>🎮</span> My Hobbies &amp; Games <span class="button-arrow">↗</span></button>
+      <div class="utility-actions">
+        <button class="utility-button" id="qrOpen"><span>▦</span> QR Code</button>
+        <button class="utility-button" id="shareButton"><span>↗</span> Share Profile</button>
+      </div>
+      <div class="footer-line"><span>BUILT WITH PASSION</span><span class="footer-dot">◆</span><span>CREATED BY SADMAN</span></div>
+    </section>
+    <p class="page-note">ONE PROFILE · ALL MY LINKS</p>
+  </main>
+
+  <div class="modal-backdrop" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="emailTitle" hidden>
+    <section class="modal glass">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-symbol">✉</div><p class="eyebrow">LET'S CONNECT</p><h2 id="emailTitle">Email Address</h2>
+      <p class="modal-description">Have a project or just want to say hi?</p>
+      <div class="email-display" id="emailAddress">sadmangalib0093@gmail.com</div>
+      <button class="primary-button" id="copyEmail">Copy Email</button><p class="feedback" id="copyFeedback" aria-live="polite"></p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="hobbyModal" role="dialog" aria-modal="true" aria-labelledby="hobbyTitle" hidden>
+    <section class="modal glass hobby-modal">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-symbol">🎮</div><p class="eyebrow">MY WORLD</p><h2 id="hobbyTitle">My Hobbies &amp; Games</h2>
+      <p class="modal-description">Main hobby: <strong>Playing Video Games</strong></p>
+      <div class="game-list">
+        <div class="game-item"><span>🔥</span><strong>FREE FIRE</strong><small>Battle Royale</small></div>
+        <div class="game-item"><span>🌬️</span><strong>WHERE WINDS MEET</strong><small>Action RPG</small></div>
+        <div class="game-item"><span>🚘</span><strong>GTA 5</strong><small>Open World</small></div>
+        <div class="game-item"><span>🎯</span><strong>COD</strong><small>FPS Shooter</small></div>
+        <div class="game-item"><span>⚡</span><strong>BLOOD STRIKE</strong><small>FPS Battle Royale</small></div>
+      </div>
+      <p class="modal-footnote">Play hard. Stay creative. Keep improving.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle" hidden>
+    <section class="modal glass">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <div class="modal-symbol">▦</div><p class="eyebrow">SCAN &amp; CONNECT</p><h2 id="qrTitle">My Profile QR</h2>
+      <p class="modal-description">Scan this code to open this page's URL.</p>
+      <div class="qr-frame"><div id="qrcode"></div></div>
+      <p class="qr-url" id="qrUrl"></p>
+      <button class="primary-button" id="copyLink">Copy Page Link</button><p class="feedback" id="qrFeedback" aria-live="polite"></p>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
